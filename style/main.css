@@ -1,0 +1,56 @@
+.circular-img-container img {
+    border-radius: 50% !important;
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    border: 3px solid #4CAF50; /* optional border */
+}
+
+.project-tile {
+    border-radius: 12px;
+    padding: 25px;
+    margin: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 1.05rem;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Assign unique colors to each category */
+.project-tile.sql       { background-color: #4B8BBE; }  /* Blue */
+.project-tile.ml        { background-color: #10B981; }  /* Green */
+.project-tile.analysis  { background-color: #F59E0B; }  /* Amber */
+.project-tile.llm        { background-color: #EC4899; }  /* Pink */
+.project-tile.powerbi   { background-color: #8B5CF6; }  /* Violet */
+
+.project-tile:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.1);
+}
+
+
+.project-tile.selected {
+  background-color: #3b82f6; /* brighter blue if selected */
+  box-shadow: 0 6px 15px rgb(0 0 0 / 0.5);
+}
+
+.badge {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin: 5px 5px 5px 0;
+    font-weight: 500;
+}
+
+.badge.tools {
+    background-color: #10b981; /* Green for tools */
+}
