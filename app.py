@@ -27,17 +27,21 @@ def about_me():
     with col1:
         # Create circular image with CSS styling
         st.markdown("""
-        <style>
-        .circular-image {
-            width: 250px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #f0f0f0;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        </style>
-        """, unsafe_allow_html=True)
+<style>
+.circular-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+</style>
+""", unsafe_allow_html=True)
+
         
         st.markdown(f'<img src="data:image/jpeg;base64,{get_base64_of_image("assets/cleave_img.jpg")}" class="circular-image">', unsafe_allow_html=True)
 
