@@ -15,7 +15,7 @@ This intelligent movie recommender app leverages vector similarity to suggest mo
 
 🔗 [View Full Code & Dataset on GitHub](https://github.com/cleavestone/Movie_Recommender_App)
 """)
-st.video("assets\project_visuals\Activity _ Cleavestone Adungo _ LinkedIn - Google Chrome 2025-07-07 15-55-05.mp4")
+st.video("assets/project_visuals/Activity _ Cleavestone Adungo _ LinkedIn - Google Chrome 2025-07-07 15-55-05.mp4")
 st.markdown("---")
 
 import streamlit as st
@@ -42,7 +42,7 @@ This interactive MCQ generator allows users to upload PDFs or text files and ins
 
 📎 [View Full Code on GitHub](https://github.com/cleavestone/MCQ_GEN)
 """)
-st.video("assets\project_visuals\MCQ_application.mp4")
+st.video("assets/project_visuals/MCQ_application.mp4")
 st.markdown("---")
 
 st.page_link("app.py", label="⬅️ Back to Home", icon="🏠")
