@@ -25,7 +25,7 @@ This project showcases a dynamic and visually engaging sales dashboard built usi
 
 🖼️ Dashboard Snapshot:
 """)
-st.image("assets\project_visuals\Power BI Desktop 7_7_2025 6_11_54 PM.png", caption="Interactive Power BI Sales Dashboard", use_container_width=True)
+st.image("assets/project_visuals/Power BI Desktop 7_7_2025 6_11_54 PM.png", caption="Interactive Power BI Sales Dashboard", use_container_width=True)
 st.markdown("---")
 
 st.page_link("app.py", label="⬅️ Back to Home", icon="🏠")
