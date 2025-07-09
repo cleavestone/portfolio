@@ -3,7 +3,7 @@
     width: 150px !important;
     height: 150px !important;
     object-fit: cover !important;
-    border: 3px solid #4CAF50; /* optional border */
+    border: 3px solid #4CAF50;
 }
 
 .project-tile {
@@ -20,24 +20,24 @@
     justify-content: center;
     color: white;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
 /* Assign unique colors to each category */
-.project-tile.sql       { background-color: #4B8BBE; }  /* Blue */
-.project-tile.ml        { background-color: #10B981; }  /* Green */
-.project-tile.analysis  { background-color: #F59E0B; }  /* Amber */
-.project-tile.llm        { background-color: #EC4899; }  /* Pink */
-.project-tile.powerbi   { background-color: #8B5CF6; }  /* Violet */
+.project-tile.sql       { background-color: #4B8BBE; }
+.project-tile.ml        { background-color: #10B981; }
+.project-tile.analysis  { background-color: #F59E0B; }
+.project-tile.llm       { background-color: #EC4899; }
+.project-tile.powerbi   { background-color: #8B5CF6; }
 
 .project-tile:hover {
     transform: translateY(-5px);
     filter: brightness(1.1);
 }
 
-
 .project-tile.selected {
-  background-color: #3b82f6; /* brighter blue if selected */
-  box-shadow: 0 6px 15px rgb(0 0 0 / 0.5);
+    background-color: #3b82f6;
+    box-shadow: 0 6px 15px rgb(0 0 0 / 0.5);
 }
 
 .badge {
@@ -52,5 +52,26 @@
 }
 
 .badge.tools {
-    background-color: #10b981; /* Green for tools */
+    background-color: #10b981;
+}
+
+.nav-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: #4B5563;
+    color: white;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #2563EB;
 }
