@@ -1,4 +1,9 @@
 import streamlit as st
+from pages.data_analysis import app as analysis_app
+from pages.machine_learning import app as ml_app
+from pages.sql import app as sql_app
+from pages.llm import app as llm_app
+from pages.power_bi import app as power_bi_app
 
 # --- PAGE CONFIG ---
 st.set_page_config(
