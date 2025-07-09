@@ -1,23 +1,32 @@
 import streamlit as st
+import base64
 
 # --- PAGE CONFIG ---
 st.set_page_config(
     page_title="Cleave's Portfolio",
     page_icon="👨‍💻",
-    layout="centered",  # Better for mobile
+    layout="centered",
     initial_sidebar_state="collapsed"
 )
 
-# --- CUSTOM CSS ---
+# --- LOAD EXTERNAL CSS ---
 def local_css(file_name):
     try:
         with open(file_name) as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
     except FileNotFoundError:
-        pass  # Skip if CSS file doesn't exist yet
+        pass
 
 local_css("style/main.css")
 
+# --- HELPER FUNCTIONS ---
+def get_base64_of_image(path):
+    with open(path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
+
+def get_base64_of_pdf(file_path):
+    with open(file_path, "rb") as f:
+        return base64.b64encode(f.read()).decode()
 
 # --- ABOUT ME ---
 def about_me():
@@ -25,25 +34,10 @@ def about_me():
     col1, col2 = st.columns([1, 3])
 
     with col1:
-        # Create circular image with CSS styling
-        st.markdown("""
-<style>
-.circular-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #f0f0f0;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-</style>
-""", unsafe_allow_html=True)
-
-        
-        st.markdown(f'<img src="data:image/jpeg;base64,{get_base64_of_image("assets/cleave_img.jpg")}" class="circular-image">', unsafe_allow_html=True)
+        st.markdown(
+            f'<img src="data:image/jpeg;base64,{get_base64_of_image("assets/cleave_img.jpg")}" class="circular-image">',
+            unsafe_allow_html=True
+        )
 
     with col2:
         st.write("""
@@ -56,11 +50,15 @@ def about_me():
         I'm seeking opportunities in Data Analysis, Data Science, and AI where I can deliver impactful, data-driven solutions that create measurable business value.
         """)
 
-# Helper function to convert image to base64
-import base64
-def get_base64_of_image(path):
-    with open(path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode()
+        # Resume download button
+        pdf_base64 = get_base64_of_pdf("assets/cleave_resume.pdf")
+        href = f'''
+        <div style="text-align:center;">
+            <a href="data:application/pdf;base64,{pdf_base64}" download="Cleave_Resume.pdf" class="download-button">📄 Download Resume</a>
+        </div>
+        '''
+        st.markdown(href, unsafe_allow_html=True)
+
 
 
 # --- ACADEMIC QUALIFICATIONS ---
