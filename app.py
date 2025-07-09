@@ -1,3 +1,6 @@
+import streamlit as st
+import base64
+
 # --- ABOUT ME ---
 def about_me():
     st.title("👋 About Me")
