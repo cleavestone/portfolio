@@ -50,13 +50,6 @@ def about_me():
         I'm seeking opportunities in Data Analysis, Data Science, and AI where I can deliver impactful, data-driven solutions that create measurable business value.
         """)
 
-        # Resume download button
-        pdf_base64 = get_base64_of_pdf("assets/cleave_resume.pdf")
-        href = f'''
-        <div style="text-align:center;">
-            <a href="data:application/pdf;base64,{pdf_base64}" download="Cleave_Resume.pdf" class="download-button">📄 Download Resume</a>
-        </div>
-        '''
         st.markdown(href, unsafe_allow_html=True)
 
 
