@@ -60,7 +60,12 @@ def academic_qualifications():
 
     - **Certificate in LLM Engineering**, Udemy  
       Gained practical skills in building and working with Large Language Models (LLMs), including prompt engineering, vector databases, and LangChain.
+
+    - **Certificate in MLOps**, Udemy  
+      Covered writing modular scripts for production, data versioning with **DVC**, experiment tracking with **MLflow**, and code versioning using **GitHub**.  
+      Gained hands-on experience in containerization with **Docker**, setting up **CI/CD pipelines** using **GitHub Actions**, and deploying models on **AWS** services including **EC2**, **ECR**, and **S3**.
     """)
+
 
 # --- WORK EXPERIENCE ---
 def work_experience():
